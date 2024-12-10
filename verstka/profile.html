@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Магазин Творчества</div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="login.html">Авторизация</a>
+                <a href="register.html">Регистрация</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Профиль пользователя</h2>
+            <form action="profile_handler.php" method="post">
+                <label for="username">Логин</label>
+                <input type="text" id="username" name="username" value="User123" readonly>
+
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" value="user@example.com">
+
+                <label for="firstname">Имя</label>
+                <input type="text" id="firstname" name="firstname" value="Иван">
+
+                <label for="lastname">Фамилия</label>
+                <input type="text" id="lastname" name="lastname" value="Иванов">
+
+                <label for="birthdate">Дата рождения</label>
+                <input type="date" id="birthdate" name="birthdate" value="1990-01-01">
+
+                <button type="submit" class="btn">Сохранить изменения</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Контакты: example@mail.com</p>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

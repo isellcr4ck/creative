@@ -1,0 +1,354 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Обеспечивает корректное вычисление размеров */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+    background-color: #5a67d8;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header .nav a:hover {
+    color: #a3bffa;
+}
+
+/* Секции */
+.hero {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+section {
+    margin: 1px 0;
+}
+
+.products, .reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card, .review-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    transition: transform 0.3s;
+}
+
+.product-card:hover, .review-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Таблица корзины */
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart table th, .cart table td {
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-summary h3 {
+    margin: 10px 0;
+}
+
+.cart-summary input {
+    padding: 10px;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #434190;
+}
+
+.btn-primary {
+    background: #2b6cb0;
+}
+
+.btn-primary:hover {
+    background: #2a4365;
+}
+
+/* Подвал */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .socials a {
+    color: #a3bffa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav a {
+        margin: 10px 0;
+    }
+
+    .products, .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary input {
+        width: 100%;
+    }
+}
+
+/* Секция слайдера */
+.slider {
+    padding: 40px 0;
+    background: #f7fafc;
+    text-align: center;
+}
+
+.slider h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.slider-item {
+    flex: 0 0 30%;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.slider-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.slider-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.slider-item h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin: 10px 0;
+}
+
+.slider-item p {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.slider-item .price {
+    font-size: 1.2rem;
+    color: #2b6cb0;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.slider-item .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #5a67d8;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.slider-item .btn:hover {
+    background: #434190;
+}
+
+/* Адаптивность для слайдера */
+@media (max-width: 768px) {
+    .slider-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .slider-item {
+        flex: 0 0 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Основной контейнер для страницы */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент страницы */
+main {
+    flex: 1; /* Заполняет всё доступное пространство между шапкой и подвалом */
+}
+
+/* Подвал */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Общие стили для форм */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-right: 25px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background: #f7fafc;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+    outline: none;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 10px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container .btn:hover {
+    background: #434190;
+}
+
+/* Ошибки */
+.form-container .error {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Ссылка */
+.form-container .form-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #5a67d8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-container .form-link:hover {
+    color: #434190;
+}

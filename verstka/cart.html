@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин творчества</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Рукоделкино</div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="auth.html">Авторизация</a>
+                <a href="register.html">Регистрация</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h2>Ваша корзина</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Товар</th>
+                            <th>Количество</th>
+                            <th>Цена за единицу</th>
+                            <th>Итого</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Название товара</td>
+                            <td>
+                                <input type="number" value="1" min="1">
+                            </td>
+                            <td>500 ₽</td>
+                            <td>500 ₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cart-summary">
+                    <input type="text" placeholder="Введите промокод">
+                    <button class="btn">Применить</button>
+                    <h3>Итоговая сумма: 500 ₽</h3>
+                    <button class="btn btn-primary">Оформить заказ</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Контакты: example@mail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

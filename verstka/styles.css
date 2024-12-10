@@ -1,0 +1,47 @@
+/* Профиль пользователя */
+.form-container input[readonly] {
+    background-color: #edf2f7;
+    cursor: not-allowed;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background: #f7fafc;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+    outline: none;
+}
+
+.form-container .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container .btn:hover {
+    background: #434190;
+}

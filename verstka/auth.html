@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин творчества</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Рукоделкино</div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="auth.html">Авторизация</a>
+                <a href="register.html">Регистрация</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Авторизация</h2>
+            <form action="login_handler.php" method="post">
+                <label for="username">Логин</label>
+                <input type="text" id="username" name="username" placeholder="Введите ваш логин">
+                
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите ваш пароль">
+    
+                <button type="submit" class="btn">Войти</button>
+    
+                <a href="register.html" class="form-link">Нет аккаунта? Зарегистрируйтесь</a>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Контакты: example@mail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

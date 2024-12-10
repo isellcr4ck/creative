@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин творчества</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Рукоделкино</div>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="auth.html">Авторизация</a>
+                <a href="register.html">Регистрация</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <div class="container">
+                <h2>Каталог</h2>
+                <div class="filters">
+                    <label for="categories">Категории:</label>
+                    <select id="categories">
+                        <option value="all">Все</option>
+                        <option value="paints">Краски</option>
+                        <option value="brushes">Кисти</option>
+                        <option value="canvas">Холсты</option>
+                    </select>
+                </div>
+
+                <div class="products">
+                    <div class="product-card">
+                        <img src="product1.jpg" alt="Product 1">
+                        <h3>Название</h3>
+                        <p>Описание</p>
+                        <span>Цена</span>
+                        <button class="btn">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Контакты: example@mail.com</p>
+        </div>
+    </footer>
+</body>
+</html>
